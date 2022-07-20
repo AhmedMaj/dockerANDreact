@@ -1,0 +1,12 @@
+sudo: required
+services: 
+  - docker
+
+
+before_install:
+  - docker build -t alotaibimahm/dockerANDreact -f Dockerfile.dev .
+
+script:
+  - docker run alotaibimahm/dockerANDreact npm run test -- --coverage
+
+language: ruby
