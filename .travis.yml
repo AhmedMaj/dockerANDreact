@@ -4,9 +4,9 @@ services:
 
 
 before_install:
-  - docker build -t alotaibimahm/dockerANDreact -f Dockerfile.dev .
+  - docker build -t testing -f Dockerfile.dev .
 
 script:
-  - docker run alotaibimahm/dockerANDreact npm run test -- --coverage
+  - docker run testing npm run test -- --coverage
 
 language: ruby
